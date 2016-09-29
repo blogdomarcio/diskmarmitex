@@ -13,7 +13,6 @@
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
-                    - Disk Marmitex 
                 </a>
             </div>
 
