@@ -21,3 +21,26 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Cliente::class, function (Faker\Generator $faker) {
+    
+    return [
+        'nome_cliente' => $faker->name,
+        'data_nasc_cliente' => $faker->date,
+        'telefone_cliente'=>$faker->e164PhoneNumber,
+        'endereco_cliente' => $faker->streetAddress,
+        'ponto_ref' => $faker->streetName,
+    ];
+});
+
+	$factory->define(App\Empresa::class, function (Faker\Generator $faker) {
+	
+		return [
+				'nome_empresa' => $faker->name,
+				'cnpj_empresa' => $faker->e164PhoneNumber,
+				'endereco_empresa'=>$faker->streetAddress,
+				'telefone_empresa' => $faker->PhoneNumber,
+				'email_empresa' => $faker->email,
+		];
+	});
+	
