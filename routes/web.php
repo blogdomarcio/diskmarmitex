@@ -21,3 +21,5 @@ Auth::routes();
 Route::get('/home', ['uses'=>'HomeController@index','as'=>'home.index']);
 
 Route::get('/cliente', ['uses'=>'ClienteController@index','as'=>'cliente.index']);
+
+Route::get('/empresa', ['uses'=>'EmpresaController@index','as'=>'cliente.index']);
