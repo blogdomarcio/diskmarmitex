@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Entregador;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,5 +14,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(ClientesTableSeed::class);
         $this->call(EmpresasTableSeed::class);
+        // $this->call(EntregadoresTableSeed::class);
     }
 }

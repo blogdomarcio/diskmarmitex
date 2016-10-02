@@ -44,3 +44,14 @@ $factory->define(App\Cliente::class, function (Faker\Generator $faker) {
 		];
 	});
 	
+		$factory->define(App\Entregador::class, function (Faker\Generator $faker) {
+		
+			return [
+					'nome_entregador' => $faker->name,
+					'cpf_entregador' => $faker->e164PhoneNumber,
+					'rg_entregador'=>$faker->streetAddress,
+					'rg_telefone' => $faker->PhoneNumber,
+				];
+		});
+		
+		
