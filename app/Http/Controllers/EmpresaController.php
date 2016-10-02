@@ -18,8 +18,8 @@ class EmpresaController extends Controller
     {
 
     	$empresas = \App\Empresa::all();
-        dd($empresas);
+       // dd($empresas);
 
-    	return view('empresa.index');
+    	return view('empresa.index', compact('empresas'));
     }
 }

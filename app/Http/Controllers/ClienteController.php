@@ -18,8 +18,8 @@ class ClienteController extends Controller
     {
 
     	$clientes = \App\Cliente::all();
-        dd($clientes);
+        
 
-    	return view('cliente.index');
+    	return view('cliente.index', compact('clientes'));
     }
 }

@@ -19,7 +19,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="{{ route('home.index')}}">DashBoard <span class="sr-only">(current)</span></a></li>
         <li><a href="{{ route('cliente.index')}}">Clientes</a></li>
-         <li><a href="{{ route('cliente.index')}}">Produtos</a></li>
+         <li><a href="{{ route('empresa.index')}}">Empresa</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
