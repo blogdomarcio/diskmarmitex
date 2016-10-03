@@ -3,13 +3,19 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-12 col-md-offset-0">
-            <div class="panel panel-default">
-                <div class="panel-heading"> View de Clientes - DiskMarmitex</div>
+        <div class="col-md-12">
+           
+       <div class="panel panel-default">
+                <ol class="breadcrumb panel-heading">                    
+                    <li class="active">Clientes</li>
+                </ol>
+               
 
                 <div class="panel-body">
                    
-                   	<p><a class="btn btn-info" href="#">Adicionar Novo</a> </p>
+                   <a class="btn btn-info" href="{{ route('cliente.adicionar') }}">Adicionar Novo</a>  
+                   	
+                    <p>
                     
                     <table class="table table-bordered">
                     <thead>

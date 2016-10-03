@@ -17,7 +17,10 @@
                 </a>
 
       <ul class="nav navbar-nav">
-        <li class="active"><a href="{{ route('home.index')}}">DashBoard <span class="sr-only">(current)</span></a></li>
+        
+         @if (!Auth::guest())
+         
+        
         <li><a href="{{ route('cliente.index')}}">Clientes</a></li>
          <li><a href="{{ route('empresa.index')}}">Empresa</a></li>
         <li class="dropdown">
@@ -32,6 +35,7 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
+         @endif
       </ul>
 
              

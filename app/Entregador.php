@@ -10,7 +10,7 @@ class Entregador extends Model
 	public $timestamps = false;
 	
 	protected $table ='entregadores';
-	protected $fileablle =['empresa_id','nome_entregador','cpf_entregador','rg_entregador','rg_telefone'];
+	protected $fillable =['empresa_id','nome_entregador','cpf_entregador','rg_entregador','rg_telefone'];
 	
     public function empresa()
     {
