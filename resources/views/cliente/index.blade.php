@@ -46,8 +46,8 @@
                     <td>{{ $cliente->telefone_cliente }} </td>
                     <td>{{ $cliente->endereco_cliente }} </td>
                     <td>{{ $cliente->ponto_ref }} </td>
-                    <td> <a class="btn btn-default" href="#">Editar</a> 
-                    <a class="btn btn-danger" href="#">Deletar</a> </td>
+                    <td> <a class="btn btn-default" href="{{ route('cliente.editar',$cliente->id) }}">Editar</a> 
+                    <a class="btn btn-danger" href="javascript:(confirm('Deletar esse cliente?') ? window.location.href='{{ route('cliente.deletar',$cliente->id)}}' : false)">Deletar</a> </td>
                     
                     </tr>
              
