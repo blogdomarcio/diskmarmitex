@@ -3,18 +3,65 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12 col-md-offset-0">
             <div class="panel panel-default">
                 <div class="panel-heading"> View de Clientes - DiskMarmitex</div>
 
                 <div class="panel-body">
                    
+                   	<p><a class="btn btn-info" href="#">Adicionar Novo</a> </p>
                     
-                    @foreach($clientes as $cliente)
+                    <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>DT.Nasc</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
+                    <th>Ponto REF.</th>
+                    <th>Ação</th>
                     
-                    <li>{{ $cliente->nome_cliente }} </li>
+                    </tr>
+                    
+                    
+                    </thead>
+                    
+                    <tbody>
+                    
+                     @foreach($clientes as $cliente)
+                     
+                      <tr>
+                    
+                    <th scope="row"> {{ $cliente->id }} </th>
+                    
+                    <td>{{ $cliente->nome_cliente }}</td>
+                    <td>{{ $cliente->data_nasc_cliente }}</td>
+                    <td>{{ $cliente->telefone_cliente }} </td>
+                    <td>{{ $cliente->endereco_cliente }} </td>
+                    <td>{{ $cliente->ponto_ref }} </td>
+                    <td> <a class="btn btn-default" href="#">Editar</a> 
+                    <a class="btn btn-danger" href="#">Deletar</a> </td>
+                    
+                    </tr>
+             
+                    
+            
                     
                     @endforeach
+                    
+                   
+                    
+                    </tbody>
+                    
+                    </table>
+                    
+                    <div align="center">
+                    
+                    {!! $clientes->links() !!}
+                   
+                    
+                    </div>
                 </div>
             </div>
         </div>
