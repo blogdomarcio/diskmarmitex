@@ -29,6 +29,12 @@ class ClienteController extends Controller
     	
     }
     
+    public function detalhe($id)
+    {
+    	$cliente = \App\Cliente::find($id);
+    	return view('cliente.detalhe',compact('cliente'));
+    }
+    
     public function salvar(Request $request) {
     	\App\Cliente::create($request->all());
     	
