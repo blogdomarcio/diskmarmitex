@@ -75,7 +75,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    DISKMARMITEX
+                <img src="images/logo.png"><br>
+                     DISKMARMITEX 
                 </div>
 
                 <div class="links">
