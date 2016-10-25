@@ -27,16 +27,16 @@
           <ul class="dropdown-menu">
           	<li><a href="{{ route('cliente.index')}}">Clientes</a></li>
             <li>   <li><a href="{{ route('empresa.index')}}">Empresa</a></li></li>
-            <li>   <li><a href="{{ route('empresa.index')}}">Entregadores</a></li></li>
-            <li>   <li><a href="{{ route('empresa.index')}}">Empresa</a></li></li>
+            <li>   <li><a href="{{ route('entregador.index')}}">Entregadores</a></li></li>
+             <li>   <li><a href="{{ route('produto.index')}}">Produtos </a></li></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+             <li>   <li><a href="{{ route('pedido.index')}}">Pedido </a></li></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+             
           </ul>
         </li>
         <li><a href="{{ route('cliente.index')}}">Clientes</a></li>
-         <li><a href="{{ route('empresa.index')}}">Pedidos	</a></li>
+         <li><a href="{{ route('pedido.index')}}">Pedidos	</a></li>
              
          @endif
       </ul>

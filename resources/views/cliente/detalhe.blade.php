@@ -22,11 +22,10 @@
                     <thead>
                     <tr>
                     <th>#</th>
-                    <th>Nome</th>
-                    <th>DT.Nasc</th>
-                    <th>Telefone</th>
-                    <th>Endereço</th>
-                    <th>Ponto REF.</th>
+                    <th>Data do Pedido</th>
+                    <th>Status</th>
+                    <th>Valor Total</th>
+                    <th>Entregador</th>
                     <th>Ação</th>
                     
                     </tr>
@@ -36,21 +35,23 @@
                     
                     <tbody>
                     
+                    @foreach($pedidos as $pedido)
                        
                       <tr>
                     
-                    <th scope="row"> {{ $cliente->id }} </th>
+                    <th scope="row"> {{ $pedido->id }} </th>
                     
-                    <td>{{ $cliente->nome_cliente }}</td>
-                    <td>{{ $cliente->data_nasc_cliente }}</td>
-                    <td>{{ $cliente->telefone_cliente }} </td>
-                    <td>{{ $cliente->endereco_cliente }} </td>
-                    <td>{{ $cliente->ponto_ref }} </td>
+                    <td>{{ $pedido->datapedido }}</td>
+                    <td>{{ $pedido->status }} </td>
+                    <td>R$ {{ $pedido->valortotal }} </td>
+                    <td>{{ $pedido->entregador_id }} </td>
                     <td> <a class="btn btn-default" href="{{ route('cliente.editar',$cliente->id) }}">Editar</a> 
                     <a class="btn btn-danger" href="javascript:(confirm('Deletar esse cliente?') ? window.location.href='{{ route('cliente.deletar',$cliente->id)}}' : false)">Deletar</a> </td>
                     
                     </tr>
                              
+
+                    @endforeach
                    
                     </tbody>
                     

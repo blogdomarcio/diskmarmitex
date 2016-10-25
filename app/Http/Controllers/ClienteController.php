@@ -20,7 +20,7 @@ class ClienteController extends Controller
     	$clientes = \App\Cliente::paginate(5);
         
 
-    	return view('cliente.index', compact('clientes'));
+    	return view('cliente.index', compact('clientes','pedidos'));
     }
     
     public function adicionar()
@@ -32,7 +32,8 @@ class ClienteController extends Controller
     public function detalhe($id)
     {
     	$cliente = \App\Cliente::find($id);
-    	return view('cliente.detalhe',compact('cliente'));
+    	$pedidos = \App\Pedido::all();
+    	return view('cliente.detalhe',compact('cliente','pedidos'));
     }
     
     public function salvar(Request $request) {

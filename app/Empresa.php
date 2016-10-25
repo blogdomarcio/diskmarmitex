@@ -16,6 +16,10 @@ class Empresa extends Model
     {
     	return $this->hasMany('App\Entregador');
     	
-    	
+    }
+    
+    public function add_entregador(Entregador $ent)
+    {
+    	return $this->entregadores()->save($ent);
     }
 }
